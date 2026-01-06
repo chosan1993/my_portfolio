@@ -7,12 +7,12 @@ const Footer = () => {
     <footer className="bg-footerColor pt-12" id="contact">
       {/* ==================== footer top ===================*/}
       <div className="max-w-4xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-12">
           <div className="space-y-8 px-4 sm:px-6 lg:px-8">
             <div className="flex items-start gap-4">
               <div>
-                <h2 className="text-white text-5xl font-semibold mb-2">Contact Me</h2>
-                <p className="text-gray-300 text-xl font-medium transition-colors block">
+                <h2 className="text-white text-4xl md:text-5xl font-semibold mb-2">Contact Me</h2>
+                <p className="text-gray-300 text-lg md:text-xl font-medium transition-colors block">
                   Feel Free to reach out!
                 </p>
               </div>
@@ -20,30 +20,30 @@ const Footer = () => {
           </div>
           <div className="space-y-6 px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3">
-              <span className="w-[45px] h-[45px] bg-[#424658] p-1 rounded-[50px] cursor-pointer text-center flex items-center justify-center">
-                <i class="ri-linkedin-line text-white text-2xl"></i>
+              <span className="w-[40px] h-[40px] md:w-[45px] md:h-[45px] bg-[#424658] p-1 rounded-[50px] cursor-pointer text-center flex items-center justify-center">
+                <i className="ri-linkedin-line text-white text-xl md:text-2xl"></i>
               </span>
               <div>
                 <a 
                   href="https://www.linkedin.com/in/cho-san/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white transition-colors hover:text-[#ACBED0]"
+                  className="text-white transition-colors hover:text-[#ACBED0] text-sm md:text-base"
                 >
                   https://www.linkedin.com/in/cho-san/
                 </a>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-[45px] h-[45px] bg-[#424658] p-1 rounded-[50px] cursor-pointer text-center flex items-center justify-center">
-                <i class="ri-mail-line text-white text-2xl"></i>
+              <span className="w-[40px] h-[40px] md:w-[45px] md:h-[45px] bg-[#424658] p-1 rounded-[50px] cursor-pointer text-center flex items-center justify-center">
+                <i className="ri-mail-line text-white text-xl md:text-2xl"></i>
               </span>
               <div>
                 <a 
                   href="mailto:chochosan201@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white transition-colors hover:text-[#ACBED0]"
+                  className="text-white transition-colors hover:text-[#ACBED0] text-sm md:text-base"
                 >
                   chochosan201@gmail.com
                 </a>
@@ -55,8 +55,8 @@ const Footer = () => {
       {/* ==================== footer top ===================*/}
 
       {/* ==================== footer bottom start ===================*/}
-      <div className="bg-[#1b1e29] py-5 mt-14">
-        <div className="container">
+      <div className="bg-[#1b1e29] py-6 md:py-5 mt-14 pb-[4.5rem] md:pb-5">
+        <div className="container px-4">
           <div className="flex items-center justify-center sm:justify-between">
             <div className="hidden sm:block">
               <div className="flex items-center gap-[10px]">
@@ -75,17 +75,18 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div>
-              <p className="text-gray-400 text-[14px]">
+            
+            <div className="w-full sm:w-auto text-center sm:text-left">
+              <p className="text-gray-400 text-[14px] md:text-[14px]">
                 Copyright {year} developed by Cho San - All right reserved.
-                </p>
+              </p>
             </div>
           </div>
         </div>
       </div>
       {/* ==================== footer bottom end ===================*/}
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

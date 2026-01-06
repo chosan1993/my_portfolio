@@ -33,24 +33,24 @@ const Experience = () => {
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                       <div className="flex items-center gap-4">
                         {exp.imgUrl && (
-                          <div className="w-16 h-16 rounded-xl overflow-hidden">
+                          <div className="hidden md:block w-16 h-16 rounded-xl overflow-hidden">
                             <img 
                               src={exp.imgUrl} 
                               alt={exp.organization}
-                              className="hidden md:block w-full h-full object-cover"
+                              className="w-full h-full object-cover"
                             />
                           </div>
                         )}
-                        <div>
-                          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{exp.role}</h2>
-                          <div className="flex items-center gap-4 mt-2">
+                        <div className="w-full md:w-auto">
+                          <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">{exp.role}</h2>
+                          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mt-2">
                             <div className="flex items-center gap-2 text-primaryColor">
                               <i className="ri-building-line"></i>
-                              <span className="font-medium">{exp.organization}</span>
+                              <span className="font-medium text-sm md:text-base">{exp.organization}</span>
                             </div>
                             <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
                               <i className="ri-map-pin-line"></i>
-                              <span>{exp.location}</span>
+                              <span className="text-sm md:text-base">{exp.location}</span>
                             </div>
                           </div>
                         </div>
@@ -89,7 +89,7 @@ const Experience = () => {
                       {exp.experiences.map((item, idx) => (
                         <div key={idx} className="flex items-start gap-3 group">
                           <div className="flex-shrink-0 mt-1">
-                            <i class="ri-checkbox-circle-fill text-primaryColor group-hover:scale-125 transition-transform"></i>
+                            <i className="ri-checkbox-circle-fill text-primaryColor group-hover:scale-125 transition-transform"></i>
                           </div>
                           <p className="text-[14px] text-gray-700 dark:text-gray-300 leading-relaxed group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                             {item}

@@ -1,10 +1,23 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 
 const Header = () => {
   
-    const headerRef = useRef(null)
     const menuRef = useRef(null)
     const [activeMenu, setActiveMenu] = useState('home')
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+        
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        
+        return () => {
+            window.removeEventListener('resize', checkMobile)
+        }
+    }, [])
 
     const menuItems = [
         { 
@@ -64,10 +77,10 @@ const Header = () => {
   return (
     <nav 
         ref={menuRef}
-        className="fixed bottom-12 md:bottom-11 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-sm"
+        className="fixed bottom-4 sm:bottom-6 md:bottom-11 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-sm sm:w-[90%]"
     >
         <div className="bg-white/90 backdrop-blur-md rounded-full shadow-xl border border-gray-200">
-            <div className="flex items-center justify-around px-2 md:px-4">
+            <div className="flex items-center justify-around px-2 py-1 sm:px-3 md:px-2">
                 {menuItems.map((item) => {
                     const isActive = activeMenu === item.id
                     return (
@@ -75,20 +88,20 @@ const Header = () => {
                             key={item.id}
                             href={`#${item.id}`}
                             onClick={(e) => handleClick(item.id, e)}
-                            className={`flex flex-col items-center justify-center p-1.5 md:p-1.5 transition-all duration-300 relative group`}
+                            className={`flex flex-col items-center justify-center p-1 sm:p-1.5 md:p-1.5 transition-all duration-300 relative group`}
                             title={item.label}
                         >
-                            {/* ====================== Icon with circular background - only for active state ====================*/}
+                            {/* ====================== Icon with circular background ====================*/}
                             <div className={`flex items-center justify-center rounded-full transition-all duration-300 ${
                                 isActive 
-                                    ? 'w-6 h-6 md:w-10 md:h-10 bg-primaryColor text-white shadow-lg' 
-                                    : 'w-10 h-10 hover:bg-gray-100 text-smallTextColor'
+                                    ? 'w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 bg-primaryColor text-white shadow-lg' 
+                                    : 'w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 hover:bg-gray-100 text-smallTextColor'
                             }`}>
-                                <i className={`text-lg md:text-xl ${isActive ? item.activeIcon : item.icon}`}></i>
+                                <i className={`text-sm sm:text-base md:text-xl ${isActive ? item.activeIcon : item.icon}`}></i>
                             </div>
 
-                            {/* ================== Tooltip for mobile (icon only) =============================*/}
-                            <div className="absolute -top-10 bg-[#434C6B] text-white text-xs font-medium px-2 py-2
+                            {/* ================== Tooltip for all screen sizes =============================*/}
+                            <div className="absolute -top-8 sm:-top-10 bg-[#434C6B] text-white text-xs font-medium px-2 py-1 sm:py-2
                             rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity 
                             duration-300 pointer-events-none">
                                 {item.label}
