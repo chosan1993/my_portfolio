@@ -25,7 +25,7 @@ const history = [
     {
         id: "02",
         imgUrl: skillsImg02,
-        role: "Senior PHP Developer",
+        role: "Senior PHP Developer | Manager",
         location: " Yangon Myanmar",
         organization: "uab Bank",
         startDate: "2024 Jun",
