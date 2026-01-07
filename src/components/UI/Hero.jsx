@@ -2,7 +2,7 @@ import React from 'react';
 import heroImg from '../../assets/images/hero-bg.png';
 import CountUp from 'react-countup';
 import AnimatedTitles from '../Utils/AnimatedTitles';
-import CV from "../../assets/cv/TechnicalProjectCoordinator.pdf";
+import CV from "../../assets/cv/TechnicalProjectManager.pdf";
 
 const Hero = () => {
   return (
