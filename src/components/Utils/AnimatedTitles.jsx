@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const AnimatedTitles = () => {
   const roles = [
     "Software Developer",
-    "Technical Project Coordinator",
     "Technical Project Manager",
     "Technical Analyst",
   ];
