@@ -2,10 +2,28 @@ import skillsImg01 from "../images/history/mysol.png";
 import skillsImg02 from "../images/history/uab.png";
 import skillsImg03 from "../images/history/cbbank.png";
 import skillsImg04 from "../images/history/acroquest.png";
+import skillsImg05 from "../images/history/DAT.png";
 
 const history = [
     {
         id: "01",
+        imgUrl: skillsImg05,
+        role: "Project Lead",
+        location: " Yangon Myanmar",
+        organization: "DIR-ACE TECHNOLOGY",
+        startDate: "2026 Feb",
+        endDate: "Present",
+        experiences: [
+            "Responsible for end-to-end project delivery from planning to deployment.", 
+            "Led and coordinated development team tasks and workload distribution.", 
+            "Performed code reviews to ensure code quality, standards, and best practices."
+        ],
+        skills: [
+            "Assembly", "COBOL", "VBA", "TSO Server", "Project Manahement", "Code Review","microsoft Access"
+        ],
+    },
+    {
+        id: "02",
         imgUrl: skillsImg01,
         role: "Senior Developer",
         location: " Yangon Myanmar",
@@ -23,7 +41,7 @@ const history = [
         ],
     },
     {
-        id: "02",
+        id: "03",
         imgUrl: skillsImg02,
         role: "Senior PHP Developer | Manager",
         location: " Yangon Myanmar",
@@ -39,7 +57,7 @@ const history = [
         ],
     },
     {
-        id: "03",
+        id: "04",
         imgUrl: skillsImg03,
         role: "Software Developer",
         location: " Yangon Myanmar",
@@ -58,7 +76,7 @@ const history = [
         ],
     },
     {
-        id: "04",
+        id: "05",
         imgUrl: skillsImg04,
         role: "Internship Program",
         location: " Yangon Myanmar",
